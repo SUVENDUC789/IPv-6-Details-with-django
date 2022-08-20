@@ -1,0 +1,31 @@
+*************** INITIAL-COMMAND ********************
+1)django-admin [show all subcommand in django]
+2)django-admin startproject PROJECT-NAME [in present directory create PROJECT-NAME folder and all nessesary file]
+3)python manage.py runserver [open your server in locally]
+
+
+*************** AFTER CREATE PROJECT-NAME FOLDER **************
+4)CREATE views.py(And writing some code)
+{
+	from django.http import HttpResponse
+
+	def index(request):
+    		return HttpResponse("Hello")
+
+	def about(request):
+    		return HttpResponse("Suvendu")
+}
+
+4)VISIT urls.py (and adding some extra data)
+{
+	from . import views
+
+	# adding ywo path
+	urlpatterns = [
+    	path('admin/', admin.site.urls),
+    	path('',views.index,name='index'),
+    	path('about',views.about,name='about')]
+
+}
+
+
