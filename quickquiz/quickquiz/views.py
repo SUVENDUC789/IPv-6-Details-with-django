@@ -8,10 +8,10 @@ def index(request):
     return render(request,'index.html',p)
 
 def analyzed(request):
-    djtext=request.GET.get('text','default')
-    removespace=request.GET.get('removespace','of')
-    convertlowercase=request.GET.get('convertlowercase','of')
-    convertuppercase=request.GET.get('convertuppercase','of')
+    djtext=request.POST.get('text','default')
+    removespace=request.POST.get('removespace','of')
+    convertlowercase=request.POST.get('convertlowercase','of')
+    convertuppercase=request.POST.get('convertuppercase','of')
    
     if removespace == "on":
         modtext=""

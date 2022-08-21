@@ -27,7 +27,8 @@
 <div class="container my-5">
     <h1>Write some text</h1>
 
-    <form action="/analyzed" method="get">
+    <form action="/analyzed" method="post">
+        {% csrf_token %}
         <div class="form-floating">
             <textarea class="form-control" name="text" placeholder="Leave a comment here" id="floatingTextarea2"
                 style="height: 100px"></textarea>
@@ -45,7 +46,7 @@
         </div>
         
     
-        <button class="btn btn-primary my-2 ">Analyse Text</button>
+        <button class="btn btn-dark my-2 ">Analyse Text</button>
     </form>
 </div>
 
