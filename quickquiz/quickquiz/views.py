@@ -9,31 +9,26 @@ def index(request):
 
 def analyzed(request):
     djtext=request.POST.get('text','default')
-    removespace=request.POST.get('removespace','of')
-    convertlowercase=request.POST.get('convertlowercase','of')
-    convertuppercase=request.POST.get('convertuppercase','of')
+    choice=request.POST.get('choice','default')
    
-    if removespace == "on":
+    if choice == "removespace":
         modtext=""
         for i in djtext:
             if i != ' ':
                 modtext=modtext+i
 
         p={'ana':' "Remove Space" ','modtext':modtext}
-        # return render(request,'analyzed.html',p)
+        return render(request,'analyzed.html',p)
 
-    elif convertlowercase == "on":
+    elif choice == "convertlowercase":
         djtext=djtext.lower()
         p={'ana':' "Convert into lower case " ','modtext':djtext}
-        # return render(request,'analyzed.html',p)
+        return render(request,'analyzed.html',p)
 
-    elif convertuppercase == "on":
+    elif choice == "convertuppercase":
         djtext=djtext.upper()
         p={'ana':' "Convert into upper case " ','modtext':djtext}
+        return render(request,'analyzed.html',p)
         
-    else :
-        return HttpResponse("Please check any one check box")
-
-    return render(request,'analyzed.html',p)
-
-
+    elif choice == "None" :
+        return HttpResponse("Please chose any one check box")
