@@ -1,5 +1,5 @@
 """
-ASGI config for quickquiz project.
+ASGI config for IpDetails project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'quickquiz.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'IpDetails.settings')
 
 application = get_asgi_application()

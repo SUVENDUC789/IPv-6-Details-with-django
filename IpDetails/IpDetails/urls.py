@@ -1,4 +1,4 @@
-"""quickquiz URL Configuration
+"""IpDetails URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -18,7 +18,10 @@ from django.urls import path
 from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.index,name='index'),
-    path('analyzed',views.analyzed,name='analyzed')
-    
+    path('', views.index ,name='index'),
+    path('ipv6/', views.ipv6 ,name='ipv6'),
+    path('ipv4/', views.ipv4 ,name='ipv4'),
+    # path('delayCreate/', views.delayCreate ,name='delayCreate'),
+    path('analyzedIpv6/', views.analyzedIpv6 ,name='analyzedIpv6'),
+    path('analyzedIpv4/', views.analyzedIpv4 ,name='analyzedIpv4'),
 ]
