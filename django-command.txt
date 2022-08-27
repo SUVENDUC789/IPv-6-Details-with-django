@@ -1,6 +1,8 @@
 *************** Besic Command ********************
 1)pip freeze [How many package install in your system]
 
+2) python manage.py runserver 4444 [RUN AND CHANGED PORT]
+
 *************** INITIAL-COMMAND ********************
 1)django-admin [show all subcommand in django]
 2)django-admin startproject PROJECT-NAME [in present directory create PROJECT-NAME folder and all nessesary file]
